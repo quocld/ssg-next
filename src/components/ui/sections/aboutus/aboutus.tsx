@@ -54,33 +54,36 @@ export default async function AboutUs() {
   ]
 
   return (
-    <section aria-label="About Us Section" className='grid grid-cols-1 gap-10 px-0 pt-12 text-black md:pt-20 lg:grid-cols-2 lg:px-[5rem] xl:px-[10rem] xl:pt-[8rem] 2xl:px-[23.75rem]'>
-      <div className='flex flex-col gap-10 px-4 lg:gap-20 lg:px-0'>
-        {/* Title + Desc */}
-        <div className='flex flex-col gap-4 lg:gap-10'>
-          <Link href={PATH_PAGE.ABOUT} aria-label="Learn more about us">
-            <h1 className='text-[2.5rem] leading-[3.125rem] font-black tracking-[0.0375rem] lg:text-[3.75rem] lg:leading-[3.75rem] lg:tracking-[0.225rem]'>
-              {t('title')}
-            </h1>
-          </Link>
-          <p className='text-[0.875rem] leading-[140%] text-[#757575]'>
-            {t('desc')}
-          </p>
+    <section aria-label="About Us Section" className='flex flex-col'>
+      <div className='grid grid-cols-1 gap-10 px-0 pt-12 text-black md:pt-20 lg:grid-cols-2 lg:px-[5rem] xl:px-[10rem] xl:pt-[8rem] 2xl:px-[23.75rem]'>
+        <div className='flex flex-col gap-10 px-4 lg:gap-20 lg:px-0'>
+          {/* Title + Desc */}
+          <div className='flex flex-col gap-4 lg:gap-10'>
+            <Link href={PATH_PAGE.ABOUT} aria-label="Learn more about us">
+              <h1 className='text-[2.5rem] leading-[3.125rem] font-black tracking-[0.0375rem] lg:text-[3.75rem] lg:leading-[3.75rem] lg:tracking-[0.225rem]'>
+                {t('title')}
+              </h1>
+            </Link>
+            <p className='text-[0.875rem] leading-[140%] text-[#757575]'>
+              {t('desc')}
+            </p>
+          </div>
+          {/* Parameter item */}
+          <div className='flex flex-row gap-x-14 gap-y-10 lg:flex-col'>
+            {PARAMETER_ITEMS.map((item, index) => (
+              <ParameterItem key={index} {...item} />
+            ))}
+          </div>
         </div>
-        {/* Parameter item */}
-        <div className='flex flex-row gap-x-14 gap-y-10 lg:flex-col'>
-          {PARAMETER_ITEMS.map((item, index) => (
-            <ParameterItem key={index} {...item} />
+        {/* aboutus item */}
+        <div className='flex flex-col items-start justify-center gap-10 bg-[#EEE] px-4 py-10 lg:items-center lg:px-[4.6875rem] lg:py-0'>
+          {ABOUTUS_ITEM.map((item, index) => (
+            <AboutUsItem key={index} {...item} />
           ))}
         </div>
       </div>
-      {/* aboutus item */}
-      <div className='flex flex-col items-start justify-center gap-10 bg-[#EEE] px-4 py-10 lg:items-center lg:px-[4.6875rem] lg:py-0'>
-        {ABOUTUS_ITEM.map((item, index) => (
-          <AboutUsItem key={index} {...item} />
-        ))}
-      </div>
-      <div className='mt-[0.9375rem] flex flex-col items-center justify-center lg:mt-[4.25rem]'>
+      {/* Witch and Map */}
+      <div className='flex flex-col items-center justify-center mt-[0.9375rem] lg:mt-[4.25rem]'>
         <Image
           className='moving-element z-10 -mb-24 scale-75 md:-mb-28 lg:-mb-32 lg:scale-100'
           alt='Gaming Witch Character'

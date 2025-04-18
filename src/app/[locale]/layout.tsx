@@ -38,10 +38,8 @@ export default async function LocaleLayout({
     notFound()
   }
   return (
-    <html lang={locale}>
-      <body
-        className={`${montserrat.variable} ${playfair.variable} antialiased`}
-      >
+    <html lang={locale} className={`${montserrat.variable} ${playfair.variable}`}>
+      <body className="antialiased">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <Script
           id='store-jsonld'
