@@ -9,9 +9,14 @@ export default async function HeroSection() {
   return (
     <div className='relative h-screen'>
       {/* Background */}
-      <div
-        style={{ backgroundImage: `url(${PATH_IMAGE.HERO_SECTION_BG})` }}
+      <Image
+        src={PATH_IMAGE.HERO_SECTION_BG}
+        alt='Hero Background'
+        fill
+        priority
+        quality={100}
         className='clip-hero h-[72%] bg-cover bg-[left_calc(53%)_top_calc(100%)] bg-no-repeat md:h-[75%] lg:h-screen lg:bg-[left_calc(55%)_top_calc(100%)] xl:bg-[left_calc(70%)_top_calc(100%)]'
+        style={{ objectFit: 'cover', objectPosition: 'left calc(53%) top calc(100%)' }}
       />
       {/* Overlay */}
       <div className='pointer-events-none absolute inset-0 z-10 hidden xl:flex'>
@@ -53,6 +58,8 @@ export default async function HeroSection() {
         width={938}
         height={938}
         priority
+        quality={90}
+        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
         style={{ width: 'auto', height: 'auto' }}
         title='Ông tiên'
       />

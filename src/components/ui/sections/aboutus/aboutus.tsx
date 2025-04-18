@@ -77,15 +77,21 @@ export default async function AboutUs() {
           src={PATH_IMAGE.WITCH}
           width={533}
           height={437}
+          priority
+          quality={90}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           title='Witch'
         />
         <Image
           className='z-0'
-          alt='pin-map'
+          alt='World map'
           src={PATH_IMAGE.MAP}
           width={1160}
           height={428}
-          title='pin-map'
+          priority
+          quality={90}
+          sizes="100vw"
+          title='World map'
         />
       </div>
     </>

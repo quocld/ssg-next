@@ -31,10 +31,13 @@ export default function Carousel() {
             >
               <Image
                 src={partner.image}
-                alt='partner'
+                alt={`Partner ${index + 1}`}
                 width={260}
                 height={100}
-                title='partner'
+                loading={index < 3 ? 'eager' : 'lazy'}
+                quality={80}
+                sizes="(max-width: 768px) 33vw, (max-width: 1200px) 20vw, 15vw"
+                title={`Partner ${index + 1}`}
               />
             </Link>
           )
@@ -56,10 +59,12 @@ export default function Carousel() {
       >
         <Image
           src={PATH_ICON.ARROW}
-          alt='arrow'
+          alt='Left arrow'
           width={40}
           height={40}
-          title='arrow'
+          priority
+          quality={90}
+          title='Left arrow'
         />
       </button>
 
@@ -78,10 +83,12 @@ export default function Carousel() {
       >
         <Image
           src={PATH_ICON.ARROW}
-          alt='arrow'
+          alt='Right arrow'
           width={40}
           height={40}
-          title='arrow'
+          priority
+          quality={90}
+          title='Right arrow'
         />
       </button>
     </div>

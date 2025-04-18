@@ -23,9 +23,12 @@ export default function CardGame({
         src={image}
         width={410}
         height={560}
-        alt='Card Image'
+        alt={name}
         className='h-full w-full object-cover'
-        title='Card Image'
+        loading={index < 4 ? 'eager' : 'lazy'}
+        quality={85}
+        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
+        title={name}
       />
       <div className='bg-opacity-50 absolute inset-0 flex items-end justify-center pr-[1.125rem] pb-[0.625rem] pl-2 break-words md:px-8 md:pb-10'>
         <div className='flex flex-col gap-1 md:gap-4'>
