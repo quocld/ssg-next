@@ -14,7 +14,8 @@ export default async function HeroSection() {
         alt='Hero Background'
         fill
         priority
-        quality={100}
+        quality={90}
+        loading="eager"
         className='clip-hero h-[72%] bg-cover bg-[left_calc(53%)_top_calc(100%)] bg-no-repeat md:h-[75%] lg:h-screen lg:bg-[left_calc(55%)_top_calc(100%)] xl:bg-[left_calc(70%)_top_calc(100%)]'
         style={{ objectFit: 'cover', objectPosition: 'left calc(53%) top calc(100%)' }}
       />
@@ -53,15 +54,16 @@ export default async function HeroSection() {
       {/* Ông tiên */}
       <Image
         className='absolute bottom-[-6%] left-[11%] z-10 scale-[77%] pb-3 md:scale-[40%] lg:bottom-[-17%] lg:left-[-12%] lg:scale-75 lg:pb-8 xl:bottom-[-6%] xl:left-0 xl:scale-100'
-        alt='Ông tiên'
+        alt='Fairy Character'
         src={PATH_IMAGE.FAIRY}
         width={938}
         height={938}
         priority
         quality={90}
+        loading="eager"
         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
         style={{ width: 'auto', height: 'auto' }}
-        title='Ông tiên'
+        title='Fairy Character'
       />
     </div>
   )
