@@ -1,9 +1,6 @@
 import { PATH_ICON_PARTNERS, PATH_IMAGE_CARD, PATH_PAGE } from './path'
 
-export const LIST_GAME: {
-  name: string
-  image: string
-}[] = [
+export const LIST_GAME = [
   {
     name: 'E-Space',
     image: PATH_IMAGE_CARD.E_SPACE
@@ -40,7 +37,6 @@ export const LIST_GAME: {
     name: 'Magic tree',
     image: PATH_IMAGE_CARD.MAGIC_TREE
   },
-
   {
     name: 'Aborigines',
     image: PATH_IMAGE_CARD.ABORIGINES
@@ -53,7 +49,7 @@ export const LIST_GAME: {
     name: 'Egypt Game',
     image: PATH_IMAGE_CARD.EGYPT_GAME
   }
-] as const
+]
 
 export const LIST_PARTNER = [
   { image: PATH_ICON_PARTNERS.POWER_UP, link: PATH_PAGE.HOME },
@@ -63,6 +59,6 @@ export const LIST_PARTNER = [
   { image: PATH_ICON_PARTNERS['2K'], link: PATH_PAGE.HOME },
   { image: PATH_ICON_PARTNERS.EA_GAME, link: PATH_PAGE.HOME },
   { image: PATH_ICON_PARTNERS.GAME, link: PATH_PAGE.HOME }
-] as const
+]
 
 export const LIST_LOCALE = [{ locale: 'en' }, { locale: 'vi' }]

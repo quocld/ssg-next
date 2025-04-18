@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import { createElement } from 'react'
 import { FiArrowRight } from 'react-icons/fi'
 
 interface TextFieldProps extends React.HTMLAttributes<HTMLInputElement> {
@@ -24,7 +25,7 @@ export default function TextField({
         type='button'
         className='absolute right-[14px] top-1/2 -translate-y-1/2 text-black hover:text-gray-600'
       >
-        <FiArrowRight size={24} />
+        {createElement(FiArrowRight, { size: 24 })}
       </button>
     </div>
   )

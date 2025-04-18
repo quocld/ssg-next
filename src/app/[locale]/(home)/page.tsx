@@ -5,12 +5,12 @@ export async function generateStaticParams() {
   return LIST_LOCALE
 }
 
-export default function Home() {
+export default async function Home() {
   return (
     <div>
-      <HeroSection />
-      <AboutUs />
-      <Games />
+      {await HeroSection()}
+      {await AboutUs()}
+      {await Games()}
       <Partners />
     </div>
   )

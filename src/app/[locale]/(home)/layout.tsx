@@ -1,6 +1,6 @@
 import { Anchor, Footer, Header } from '@/components'
 
-export default function HomeLayout({
+export default async function HomeLayout({
   children
 }: {
   children: React.ReactNode
@@ -10,7 +10,7 @@ export default function HomeLayout({
       <div className='min-h-screen flex-col bg-white'>
         <Header />
         <main className='flex-grow'>{children}</main>
-        <Footer />
+        {await Footer()}
         <Anchor />
       </div>
     </>
